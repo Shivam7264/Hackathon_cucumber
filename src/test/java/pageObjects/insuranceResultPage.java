@@ -31,10 +31,16 @@ BaseClass base=new BaseClass();
 	@FindBy(xpath = "(//input[@name='sort'])[2]")
 	WebElement lowToHigh;
 	
-	@FindBy(xpath = "//*[@class='quotesCard--insurerName']")//NAME OF INSURANCE COMPANY
+//	@FindBy(xpath = "//*[@class='quotesCard--insurerName']")//NAME OF INSURANCE COMPANY
+//	List<WebElement> companyName;
+//
+//	@FindBy(xpath = "//*[@class='premiumPlanPrice']")//PRICE OF INSURANCE COMPANY
+//	List<WebElement> price;
+	
+	@FindBy(className = "quotesCard--insurerName")//NAME OF INSURANCE COMPANY
 	List<WebElement> companyName;
 
-	@FindBy(xpath = "//*[@class='premiumPlanPrice']")//PRICE OF INSURANCE COMPANY
+	@FindBy(className = "premiumPlanPrice")//PRICE OF INSURANCE COMPANY
 	List<WebElement> price;
 		
 	

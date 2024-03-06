@@ -21,8 +21,12 @@ BaseClass base =new BaseClass();
 	}
 	
 	// Elements
-		@FindBy(xpath = "//*[@id=\"country\"]")//INPUT BOX COUNTRY NAME
+//		@FindBy(xpath = "//*[@id=\"country\"]")//INPUT BOX COUNTRY NAME
+//		WebElement inputCountry;
+		
+		@FindBy(id = "country")//INPUT BOX COUNTRY NAME
 		WebElement inputCountry;
+		
 		@FindBy(xpath = "//*[@id=\"search-country\"]/ul/li[1]")//SUGGESTED COUNTIES
 		WebElement suggestedCountry;
 		
@@ -40,7 +44,10 @@ BaseClass base =new BaseClass();
 		WebElement endDate;
 		
 		
-		@FindBy(xpath = "//*[@id=\"traveller_2\"]")//NO. OF PEOPLE
+//		@FindBy(xpath = "//*[@id=\"traveller_2\"]")//NO. OF PEOPLE
+//		WebElement people;
+		
+		@FindBy(id = "traveller_2")//NO. OF PEOPLE
 		WebElement people;
 		
 		@FindBy(xpath = "(//*[@id=\"divarrow_undefined\"]/div)[1]")
@@ -56,10 +63,10 @@ BaseClass base =new BaseClass();
 		WebElement age2;
 
 		
-		@FindBy(xpath = "//*[@id=\"ped_no\"]")//FITNESS BUTTON NO
+		@FindBy(id = "ped_no")//FITNESS BUTTON NO
 		WebElement medicalNo;
 	
-		@FindBy(xpath = "//*[@id=\"mobileNumber\"]")
+		@FindBy(id= "mobileNumber")
 		WebElement inputMobile;
 		
 		@FindBy(xpath = "//button[text()='View plans']")
@@ -87,11 +94,12 @@ BaseClass base =new BaseClass();
 		}
 		
 		public void selectDate() throws InterruptedException {
-		
+			Thread.sleep(5000);
 			base.clicker(calender);
 			
-			base.clicker(startDate);
 			
+			base.clicker(startDate);
+		
 			base.clicker(endDate);
 			
 			base.clicker(btnNext);
@@ -127,8 +135,5 @@ BaseClass base =new BaseClass();
 			inputMobile.sendKeys("9455080233");
 			base.clicker(btnViewPlan);
 		}
-		
-		
-		
 
-}
+		}

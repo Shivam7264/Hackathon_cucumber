@@ -16,6 +16,7 @@ public class TC_03_HealthInsurance {
 	   homePage hp=new homePage(BaseClass.getDriver());
 	   @Given("user policy bazar website")
 	   public void user_policy_bazar_website() {
+		   BaseClass.getLogger().info("hover ON health INSURANCE.. ");
 	      System.out.println("navigated to home page");
 	   }
 

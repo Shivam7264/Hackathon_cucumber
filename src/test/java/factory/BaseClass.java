@@ -76,6 +76,7 @@ public class BaseClass {
 		 driver.manage().deleteAllCookies(); 
 		 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		 //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+		// driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(10));
 		 
 		 return driver;
 		 
@@ -102,6 +103,7 @@ public class BaseClass {
 	
 	public void clicker(WebElement ele) {// to click on any web element using java script executor
 		JavascriptExecutor js=(JavascriptExecutor)getDriver();
+		js.executeScript("arguments[0].style.border='3px solid red'", ele);
 		js.executeScript("arguments[0].click();",ele);
 	}
 	
@@ -113,8 +115,8 @@ public class BaseClass {
     // ANSI escape code for reset color
     String resetColor = "\u001B[0m";
 	for(WebElement ele:menuItems) {
-			System.out.println(greenColor+ele.getText());
-			ls.add(ele.getText()+resetColor);
+			System.out.println(greenColor+ele.getText()+resetColor);
+			ls.add(ele.getText());
 		}
 		WriteData.writeData(ls);
 	}

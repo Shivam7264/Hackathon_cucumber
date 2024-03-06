@@ -42,8 +42,7 @@ public void user_filled_an_european_country_in_destination_details_and_click_on_
 
 @When("user filled trip date and click on next")
 public void user_filled_trip_date_and_click_on_next() throws InterruptedException {
-	BaseClass.getLogger().info("FILLED TRIP DATES.... ");
-	Thread.sleep(5000);
+	BaseClass.getLogger().info("FILLED TRIP DATES.... ");	
 	tp.selectDate();
 
 }

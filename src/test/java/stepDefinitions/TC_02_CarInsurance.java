@@ -44,7 +44,7 @@ public class TC_02_CarInsurance {
 
 	   @When("user select fuel type as petrol")
 	   public void user_select_fuel_type_as_petrol() {
-	      cp.selectFuelType();
+	     cp.selectFuelType(); 
 	   }
 
 	   @When("user select a variant of car")

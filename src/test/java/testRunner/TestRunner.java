@@ -1,14 +1,14 @@
 package testRunner;
 
 import org.junit.runner.RunWith;
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
+
 @RunWith(Cucumber.class)
 @CucumberOptions(
-					features= {".//Features/"},
-					//features= {".//Features/travel.feature"},
+					//features= {".//Features/"},
+					features= {".//Features/car.feature"},
 					
 					//features= {".//Features/travel.feature",".//Features/car.feature","//Features/health.feature"},
 					//features= {"@target/rerun.txt"},
@@ -19,6 +19,8 @@ import io.cucumber.junit.CucumberOptions;
 							},
 							
 					dryRun=false,    // checks mapping between scenario steps and step definition methods
+					
+					
 					monochrome=true,    // to avoid junk characters in output
 					publish=true   // to publish report in cucumber server
 					,tags="@sanity or @regression" // this will execute scenarios tagged with @sanity
@@ -29,4 +31,6 @@ import io.cucumber.junit.CucumberOptions;
 		)
 		public class TestRunner {
 
-		}
+	
+			}
+
