@@ -37,19 +37,16 @@ BaseClass base =new BaseClass();
 	@FindBy(xpath = "//b[text()='Brezza']")//model button
 	WebElement model;
 	
-	@FindBy(xpath = "//li[text()=\"Carens\"]")//model button
+	@FindBy(xpath = "//li[text()=\"CARNIVAL\"]")//model button
 	WebElement modelNew;
 
 	@FindBy(xpath = "//*[@id=\"Petrol\"]")//fuel button
 	WebElement fuelType;
-	
-	@FindBy(xpath = "//li[text()='Petrol']")//fuel button
-	WebElement fuelTypeNew;
 
 	@FindBy(xpath = "//b[text()='ZXi (1462 cc)']")//variant button
 	WebElement variant;
 	
-	@FindBy(xpath = "//li[text()=\"Prestige 1.5 Petrol 7 STR (1497 cc)\"]")//variant button
+	@FindBy(xpath = "//li[text()=\"Premium 8 STR (2199 cc)\"]")//variant button
 	WebElement variantNew;
 
 
@@ -78,40 +75,39 @@ BaseClass base =new BaseClass();
 	WebElement errorMsgNew;
 
 	public void chooseCity() {
-		//base.clicker(city);
-		base.clicker(cityNew);
+		base.clicker(city);
+		//base.clicker(cityNew);
 		
 	}
 	
 	public void chooseCityCode() {
 		
-		//base.clicker(cityCode);
-		base.clicker(cityCodeNew);
+		base.clicker(cityCode);
+		//base.clicker(cityCodeNew);
 	}
 	public void chooseCarBrand() {
 		
-//		base.clicker(brand);
-		base.clicker(brandNew);
+		base.clicker(brand);
+		//base.clicker(brandNew);
 	}
 	public void chooseCarModel() {
 		
-//		base.clicker(model);
-		base.clicker(modelNew);
+		base.clicker(model);
+		//base.clicker(modelNew);
 	}
 	public void selectFuelType() {
-//		base.clicker(fuelType);
-		base.clicker(fuelTypeNew);
+		base.clicker(fuelType);
 	}
 	public void chooseCarVariant() {
 		
-		//base.clicker(variant);
-		base.clicker(variantNew);
+		base.clicker(variant);
+		//base.clicker(variantNew);
 	}
 	public void fillDetails() {
-//		selectName.sendKeys("xyx");
-//		selectEmail.sendKeys("1234@ejdbeujb");
-		selectNameNew.sendKeys("xyx");
-		selectEmailNew.sendKeys("1234@ejdbeujb");
+		selectName.sendKeys("xyx");
+		selectEmail.sendKeys("1234@ejdbeujb");
+//		selectNameNew.sendKeys("xyx");
+//		selectEmailNew.sendKeys("1234@ejdbeujb");
 	
 	}
 	public void getErrorMsg(){
@@ -119,10 +115,10 @@ BaseClass base =new BaseClass();
         String redColor = "\u001B[31m";
         // ANSI escape code for reset color
         String resetColor = "\u001B[0m";
-//		base.clicker(btnViewPrices);
-        base.clicker(btnViewPricesNew);
-//		System.out.println("Error Message :"+redColor+errorMsg.getText()+resetColor);
-        System.out.println("Error Message :"+redColor+errorMsgNew.getText()+resetColor);
+		base.clicker(btnViewPrices);
+		//   base.clicker(btnViewPricesNew);
+		System.out.println("Error Message :"+redColor+errorMsg.getText()+resetColor);
+       // System.out.println("Error Message :"+redColor+errorMsgNew.getText()+resetColor);
 	}
 	
 	
