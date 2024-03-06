@@ -27,11 +27,6 @@ public class homePage extends BasePage {
 	@FindBy(xpath = "//section/div[4]/a")//car button
 	WebElement carInsurance;
 	
-	@FindBy(xpath = "//a[text()='Buying a new car? Click here']")//do not know no. button
-	WebElement donotKnow;
-	
-	@FindBy(xpath = "//span[normalize-space()=\"Click here\"]")//do not know no. button
-	WebElement donotKnow1;
 	
 	@FindBy(xpath = "//a[text()='Insurance Products ']")//insurance products . button
 	WebElement healthInsurance;
@@ -75,10 +70,7 @@ public class homePage extends BasePage {
 	public void clickCar() {
 		base.clicker(carInsurance);
 	}
-	public void noNumber() {
-		//base.clicker(donotKnow);
-		base.clicker(donotKnow1);
-	}
+	
 	
 	public void hoverHealth() throws IOException {
 		Actions act=new Actions(driver);

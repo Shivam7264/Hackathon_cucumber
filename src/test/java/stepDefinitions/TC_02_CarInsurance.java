@@ -23,7 +23,7 @@ public class TC_02_CarInsurance {
 
 	   @When("user clicked do not know car number")
 	   public void user_clicked_do_not_know_car_number() {
-	      hp.noNumber();
+	      cp.noNumber();
 	   }
 
 	   @When("user choose city and city number")
