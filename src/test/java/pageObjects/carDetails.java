@@ -44,7 +44,7 @@ BaseClass base =new BaseClass();
 	@FindBy(xpath = "//*[@id=\"Petrol\"]")//fuel button
 	WebElement fuelType;
 
-	@FindBy(xpath = "//b[text()='ZXi (1462 cc)']")//variant button
+	@FindBy(xpath = "//b[text()='ZXI AT (1462 cc)']")//variant button
 	WebElement variant;
 	
 	@FindBy(xpath = "//li[text()=\"Premium 8 STR (2199 cc)\"]")//variant button
