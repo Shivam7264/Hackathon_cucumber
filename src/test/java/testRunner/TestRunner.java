@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 					//features= {".//Features/"},
-					features= {".//Features/car.feature"},
+					features= {".//Features/travel.feature"},
 					
 					//features= {".//Features/travel.feature",".//Features/car.feature","//Features/health.feature"},
 					//features= {"@target/rerun.txt"},

@@ -1,6 +1,7 @@
 package pageObjects;
 
 import java.io.IOException;
+import java.time.Duration;
 //import java.time.Duration;
 //import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +10,13 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 //import org.openqa.selenium.support.ui.ExpectedConditions;
 //import org.openqa.selenium.support.ui.FluentWait;
 //import org.openqa.selenium.support.ui.Wait;
 //import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import factory.BaseClass;
 //import utilities.WriteData;
@@ -25,6 +29,21 @@ BaseClass base=new BaseClass();
 	}
 	
 	// Elements
+	@FindBy(id = "studentTrip")//student plan radio button
+	WebElement studentPlan;
+	
+	@FindBy(id = "Traveller_1")//student 1 
+	WebElement student1;
+	
+	@FindBy(id = "Traveller_2")//student 2 
+	WebElement student2;
+	
+	@FindBy(id = "feet")//trip duration dropdown
+	WebElement tripDuration;
+	
+	@FindBy(xpath = "//button[text()='Apply']")//apply plan button
+	WebElement applyPlan;
+	
 	@FindBy(xpath = "//p[text()='Sort by']")
 	WebElement sortBy;//driver.findElement(By.xpath("//summary/p")).click();
 	
@@ -45,6 +64,18 @@ BaseClass base=new BaseClass();
 		
 	
 	// Action Methods
+	public void selectPlan() throws InterruptedException {
+		//Thread.sleep(2000);
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.elementToBeClickable(studentPlan));
+		base.clicker(studentPlan);		
+		base.clicker(student1);
+		base.clicker(student2);		
+		Select select =new Select(tripDuration);		
+		select.selectByIndex(1);		
+		base.clicker(applyPlan);
+	}
+	
 	public void sorting() throws InterruptedException {
 		Thread.sleep(5000);
 //		Wait<WebDriver> wait = new FluentWait<>(driver)
