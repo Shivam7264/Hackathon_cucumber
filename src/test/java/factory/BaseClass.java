@@ -33,8 +33,7 @@ public class BaseClass {
 	{
 		if(getProperties().getProperty("execution_env").equalsIgnoreCase("remote"))
 		{
-			DesiredCapabilities capabilities = new DesiredCapabilities();
-			
+			DesiredCapabilities capabilities = new DesiredCapabilities();			
 			//os
 			if (getProperties().getProperty("os").equalsIgnoreCase("windows")) {
 			    capabilities.setPlatform(Platform.WIN11);

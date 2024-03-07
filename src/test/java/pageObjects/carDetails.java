@@ -126,6 +126,8 @@ BaseClass base =new BaseClass();
 		//   base.clicker(btnViewPricesNew);
 		System.out.println("Error Message :"+redColor+errorMsg.getText()+resetColor);
        // System.out.println("Error Message :"+redColor+errorMsgNew.getText()+resetColor);
+		
+		
 	}
 	
 	

@@ -78,6 +78,7 @@ public void user_provideds_a_valid_phone_number_to_get_updates_and_click_view_pl
 public void user_applied_the_sort_by_filter_low_to_high() throws InterruptedException {
 	BaseClass.getLogger().info("APPLIED FILTERS LOW TO HOGH.. ");
 	insuranceResultPage rs=new insuranceResultPage(BaseClass.getDriver());
+	rs.selectPlan();
 	rs.sorting();
 }
 
