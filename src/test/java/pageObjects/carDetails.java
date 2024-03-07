@@ -79,6 +79,7 @@ BaseClass base =new BaseClass();
 	WebElement errorMsgNew;
 	
 	public void noNumber() {
+		driver.get("https://ci.policybazaar.com/v1?utm_content=home_v11");
 		//base.clicker(donotKnow);
 		base.clicker(donotKnowNew);
 	}
