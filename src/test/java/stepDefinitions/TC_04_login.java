@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 
 import pageObjects.homePage;
 
-public class TC_03_login {
+public class TC_04_login {
     @Given("User navigated to home Page")
     public void user_navigated_to_home_page() {
         homePage hp=new homePage(BaseClass.getDriver());

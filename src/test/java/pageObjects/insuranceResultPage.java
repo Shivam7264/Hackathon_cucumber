@@ -65,14 +65,18 @@ BaseClass base=new BaseClass();
 	
 	// Action Methods
 	public void selectPlan() throws InterruptedException {
-		//Thread.sleep(2000);
-		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.elementToBeClickable(studentPlan));
-		base.clicker(studentPlan);		
+//		Thread.sleep(2000);
+		WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(15));
+		wait.until(ExpectedConditions.visibilityOf(studentPlan));
+		base.clicker(studentPlan);
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.visibilityOf(student1));
 		base.clicker(student1);
-		base.clicker(student2);		
+		wait.until(ExpectedConditions.visibilityOf(student2));
+//		Thread.sleep(2000);
+		base.clicker(student2);				
 		Select select =new Select(tripDuration);		
-		select.selectByIndex(1);		
+		select.selectByIndex(1);	
 		base.clicker(applyPlan);
 	}
 	
